@@ -5,6 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { UserMenu } from "./UserMenu";
 // import { useEffect, useState } from 'react';
 // import { createClient } from '@/utils/supabase/client';
 // import type { User } from '@supabase/supabase-js';
@@ -33,7 +34,10 @@ export const Header = ({ className }: HeaderProps) => {
         </Link>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
+          <UserMenu />
+          <div className="border-l pl-4 dark:border-gray-800">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
